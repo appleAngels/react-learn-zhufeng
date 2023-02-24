@@ -18,7 +18,7 @@
   - package.json -> browserslist
   - @babel/polyfill
 
-    - react 脚手架：react-app-polyfill
+    - react 脚手架：react-app-polyfill（对 @babel/polyfill 的重写）
 
       ```
       // index.jsx
@@ -30,3 +30,9 @@
 
     - 自定义 react 项目：yarn add @babel/polyfill
       - 入口文件 import '@babel/polyfill'
+
+- 处理 proxy 跨域
+  - 在 src 目录中，新建 setupProxy.js
+  - yarn add http-proxy-middleware
+    - http-proxy-micdleware: 实现跨域代理的模块
+    - webpack-dev-server 的跨域代理原理，也是基于它完成的
